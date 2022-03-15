@@ -1,8 +1,8 @@
-package com.amazon.ata.threadsafety.classroom.suppliers;
+package com.amazon.ata.threadsafety.suppliers;
 
-import com.amazon.ata.threadsafety.classroom.FlavorRequestQueue;
-import com.amazon.ata.threadsafety.classroom.IceCreamMaker;
-import com.amazon.ata.threadsafety.classroom.dao.CartonDao;
+import com.amazon.ata.threadsafety.FlavorRequestQueue;
+import com.amazon.ata.threadsafety.IceCreamMaker;
+import com.amazon.ata.threadsafety.dao.CartonDao;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static com.amazon.ata.threadsafety.classroom.model.Flavor.CHOCOLATE;
+import static com.amazon.ata.threadsafety.model.Flavor.CHOCOLATE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Phase1Test {

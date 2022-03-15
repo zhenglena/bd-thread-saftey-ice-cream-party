@@ -1,8 +1,8 @@
-package com.amazon.ata.threadsafety.classroom;
+package com.amazon.ata.threadsafety;
 
-import com.amazon.ata.threadsafety.classroom.dao.CartonDao;
-import com.amazon.ata.threadsafety.classroom.model.Carton;
-import com.amazon.ata.threadsafety.classroom.model.Flavor;
+import com.amazon.ata.threadsafety.dao.CartonDao;
+import com.amazon.ata.threadsafety.model.Carton;
+import com.amazon.ata.threadsafety.model.Flavor;
 
 /**
  * The machine for making a batch/carton of ice cream.

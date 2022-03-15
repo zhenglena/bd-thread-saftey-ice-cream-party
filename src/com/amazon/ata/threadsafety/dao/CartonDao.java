@@ -1,7 +1,7 @@
-package com.amazon.ata.threadsafety.classroom.dao;
+package com.amazon.ata.threadsafety.dao;
 
-import com.amazon.ata.threadsafety.classroom.model.Carton;
-import com.amazon.ata.threadsafety.classroom.model.Flavor;
+import com.amazon.ata.threadsafety.model.Carton;
+import com.amazon.ata.threadsafety.model.Flavor;
 
 import java.util.ArrayList;
 import java.util.HashMap;

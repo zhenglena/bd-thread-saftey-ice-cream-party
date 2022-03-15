@@ -1,4 +1,4 @@
-package com.amazon.ata.threadsafety.classroom.model;
+package com.amazon.ata.threadsafety.model;
 
 import java.util.ArrayList;
 import java.util.List;

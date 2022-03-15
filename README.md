@@ -1,20 +1,8 @@
 ## Ice Cream Party
 
-**branch-name:** `threadsafety-classroom`
-
-You do not need to be running `ada` for this activity.
-
-**RDE workflows:**
-- threadsafety-classroom-phase0
-- threadsafety-classroom-phase1
-- threadsafety-classroom-phase2
-
 ### Introduction
 
-Remember our `IceCreamParlorService` from prior lessons?
-Jeff was so impressed that he wants us to offer sundaes at the Amazon Summer Picnic!
-
-That's a lot more traffic than we imagined when we built our humble ice cream service,
+We're experiencing a lot more traffic than we imagined when we built our humble ice cream service,
 so we're making some changes. We're starting by improving the ice cream production.
  
 The `IceCreamMaker` now represents a single ice cream making machine.
@@ -27,16 +15,16 @@ Unfortunately, it's... having some trouble. You'll be taking care of that.
 ### Phase 0: Sundae mornings, go for a ride
 
 1. Build your snippets package
-1. Run the `threadsafety-classroom-phase0` RDE workflow and verify that it passes
+1. Run the `Phase0Test` and verify that it passes
 
 GOAL: Make sure your Snippets package builds properly, and the starter test passes.
 
 Phase 0 is complete when:
-- The `threadsafety-classroom-phase0` RDE workflow runs and passes
+- The `Phase0Test` passes
 
 ### Phase 1: A month of sundaes
 
-If you run the `threadsafety-classroom-phase1` RDE workflow, you'll see that all the requests
+If you run the `Phase1Test` test class, you'll see that all the requests
 in our `FlavorRequestQueue` aren't being handled. We think it's a problem with the `LinkedList`
 getting confused when multiple threads try to `poll()` at the same time.
 
@@ -59,16 +47,16 @@ GOAL: determine what methods in `FlavorRequestQueue` must be synchronized.
 Phase 1 is complete when:
 - The class has agreed on how to make `FlavorRequestQueue` thread-safe.
 - You've shared & reviewed the solution with another member of your group
-- The `threadsafety-classroom-phase1` RDE workflow is passing for your group
+- The `Phase1Test` test class is passing for your group
 
 ### Phase 2: We all scream
 
-Look at the Phase1Test in `tests/java/com/amazon/ata/threadsafety/classroom.com.amazon.ata.threadsafety.suppliers`.
+Look at the Phase1Test in `tests/java/com/amazon/ata/threadsafety/com.amazon.ata.threadsafety.suppliers`.
 It populates a big request queue, then kicks off a bunch of `IceCreamMaker` threads.
 That seems to work fine.
 
 The Phase2Test first kicks off the `IceCreamMaker` thread, then populates the request queue.
-Is that going to work with your synchronization? Run the `threadsafety-classroom-phase2` test
+Is that going to work with your synchronization? Run the `Phase2Test` test class
 to verify. If it runs the test for longer than a few seconds, you've got a deadlock.
 
 You'll see this deadlock if you `synchronized` both `needFlavor` and `nextNeededFlavor`.
@@ -86,13 +74,13 @@ GOAL: Understand why this deadlock occurred and fix it.
 
 Phase 2 is complete when:
 - You've shared & reviewed the solution with another member of your group
-- `threadsafety-classroom-phase2` RDE workflow is passing
-  (This also runs the previous phase tests to ensure that they're still passing)
+- `Phase2Test` is passing
+- `Phase0Test` and `Phase1Test` still pass as well
 
 ### Extension: Pre-packaged
 
 You've created your own thread-safe queue. But Java has a built-in `LinkedBlockingQueue`
 that's also thread-safe.
 
-Update FlavorRequestQueue to use a `LinkedBlockingQueue` instead. Make sure `threadsafety-classroom-phase1`
-and `threadsafety-classroom-phase2` still pass.
+Update FlavorRequestQueue to use a `LinkedBlockingQueue` instead. Make sure `Phase1Test`
+and `Phase2Test` still pass.

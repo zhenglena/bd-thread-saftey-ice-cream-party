@@ -1,6 +1,6 @@
-package com.amazon.ata.threadsafety.classroom;
+package com.amazon.ata.threadsafety;
 
-import com.amazon.ata.threadsafety.classroom.model.Flavor;
+import com.amazon.ata.threadsafety.model.Flavor;
 
 import java.util.LinkedList;
 import java.util.Queue;
